@@ -12,7 +12,6 @@ def xlsx_meta(nombre):
     props = wb.properties
     metadata['Titulo'] = props.title
     metadata['Creador'] = props.creator
-    metadata['keywords'] = props.keywords
     metadata['descripción'] = props.description
     metadata['Creación'] = props.created.isoformat() if props.created else None
     metadata['Modificado'] = props.modified.isoformat() if props.modified else None
