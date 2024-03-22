@@ -2,6 +2,8 @@ import openpyxl
 import docx
 import PyPDF2
 
+
+
 def xlsx_meta(nombre):
     wb = openpyxl.load_workbook(nombre)
     metadata = {}
@@ -46,24 +48,26 @@ if __name__ == "__main__":
 
     # Extracción de datos del PDF
     print("\n∞∞∞ Metadatos de PDF ∞∞∞")
-    #se llama a la función con la ruta al archivo
+    #se llama a la función, en esta parte se debe de colocar la ruta al archivo del cual se quieren extraer datos
     pdf_metadata = pdf_meta("/home/kali/Desktop/ticketdecompra.pdf")
     for key, value in pdf_metadata.items():
         print(f"{key}: {value}")
         
     # Extracción de datos del DOCX
     print("\n∞∞∞ Metadatos de DOCX ∞∞∞")
-    #se llama a la función con la ruta al archivo
+    #se llama a la función, en esta parte se debe de colocar la ruta al archivo del cual se quieren extraer datos
     docx_metadata = docx_meta("/home/kali/Desktop/Doctos.docx")
     for key, value in docx_metadata.items():
         print(f"{key}: {value}")
         
     # Extracción de datos del XLSX
     print("\n∞∞∞ Metadatos de XLSX ∞∞∞")
-    #se llama a la función con la ruta al archivo
+    #se llama a la función, en esta parte se debe de colocar la ruta al archivo del cual se quieren extraer datos
     xlsx_metadata = xlsx_meta("/home/kali/Desktop/Tabla.xlsx")
     for key, value in xlsx_metadata.items():
         print(f"{key}: {value}")
+
+# Esto solo de debe de compilar en la terminal, usando el comando python obtmet.py, las rutas al archivo se asignaran aqui en los apartados de extracción de datos
 
     
 
